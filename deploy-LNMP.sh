@@ -31,10 +31,10 @@ echo "/usr/local/nginx/sbin/nginx" >> /etc/rc.local && echo -e "9--------------\
 chmod +x /etc/rc.local 
 
 systemctl start mariadb  && echo -e "10-------------\033[35mmariadb服务已启动\033[39m"
-systemctl enable mariadb && echo -e "11-------------\033[35m已配置mariadb开机自启\033[39m"
+systemctl enable mariadb &> /dev/null && echo -e "11-------------\033[35m已配置mariadb开机自启\033[39m"
 
 systemctl start php-fpm && echo -e "12-------------\033[35mphp-fpm服务已启动\033[39m"
-systemctl enable php-fpm && echo -e "13-------------\033[35m已配置php-fpm开机自启\033[39m"
+systemctl enable php-fpm &> /dev/null && echo -e "13-------------\033[35m已配置php-fpm开机自启\033[39m"
 
 echo -e "\033[35mLNMP基本环境部署完成\033[39m\n"
 
