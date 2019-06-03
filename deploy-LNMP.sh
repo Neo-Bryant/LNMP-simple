@@ -36,6 +36,7 @@ systemctl enable mariadb &> /dev/null && echo -e "11-------------\033[35m已配�
 systemctl start php-fpm && echo -e "12-------------\033[35mphp-fpm服务已启动\033[39m"
 systemctl enable php-fpm &> /dev/null && echo -e "13-------------\033[35m已配置php-fpm开机自启\033[39m"
 
+ln -s /usr/local/nginx/sbin/nginx /sbin/ &> /dev/null && echo -e "10-------------\033[35mningx已创建软连接\033[39m"
 echo -e "\033[35mLNMP基本环境部署完成\033[39m\n"
 
 echo -e "\033[33m80端口开启状态:\033[39m"
