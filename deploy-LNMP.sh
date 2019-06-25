@@ -8,8 +8,8 @@ fi
 tar -xf /root/lnmp_soft.tar.gz && echo -e "0--------------\033[35m/root/lnmp_soft.tar.gz解压完成\033[39m"
 yum -y install gcc openssl-devel pcre-devel &> /dev/null  && echo -e "1--------------\033[35mgcc,openssl-devel,pcre-devel安装成功\033[39m"
 useradd -s /sbin/nologin nginx &> /dev/null 
-tar -xf /root/lnmp_soft/nginx-1.12.2.tar.gz -C /root/lnmp_soft/
-echo -e "2--------------\033[35mnginx-1.12.2.tar.gz解压完成\033[39m "
+tar -xf /root/lnmp_soft/nginx-1.12.2.tar.gz -C /root/lnmp_soft/ \
+&& echo -e "2--------------\033[35mnginx-1.12.2.tar.gz解压完成\033[39m "
 
 cd /root/lnmp_soft/nginx-1.12.2
 
